@@ -1,0 +1,62 @@
+@media screen and (max-width:530px) {
+    .gradient-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background:
+            radial-gradient(circle at center, rgba(1, 113, 170, .2) 0%, rgba(0, 0, 0, 0) 100%),
+            linear-gradient(to bottom, #000 0%, #000 10%, #431400 30%, #431400 100%);
+    }
+
+    .mob-cells {
+        background-image: url("/cells_mob.png");
+    }
+
+    .about_title {
+        color: #FFE9D9;
+        font-size: 7rem;
+        line-height: 1;
+        margin-top: 3rem;
+        margin-bottom: -2rem;
+    }
+
+    .about_title span {
+        display: block;
+        text-align: center;
+    }
+
+    .phone-el {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phone-el .custom_button {
+        min-width: 160px;
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+    }
+
+    .no-scroll {
+        max-height: 100vh;
+        overflow: hidden;
+    }
+
+    .phone-text {
+        color: #FFE9D9;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: 100%;
+    }
+
+
+}

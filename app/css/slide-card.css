@@ -1,0 +1,32 @@
+.slide_card {
+    padding: 4rem 3rem 3rem;
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    margin-bottom: 4rem;
+    align-items: start;
+    left: 0;
+    position: sticky;
+    row-gap: 5rem;
+    background-image: linear-gradient(to right bottom, #441901 0%, #AA3F03 100%);
+}
+
+.slide_card_number {
+    font-size: 2rem;
+    text-align: end;
+    color: rgba(255, 233, 217, 0.2);
+}
+
+.slide_card-title {
+    font-size: 3rem;
+    color: #FFE9D9;
+    line-height: 1;
+}
+
+.slide_card-image_container {
+    grid-column: span 2;
+}
+
+.slide_card-image_container img {
+    width: 100%;
+}

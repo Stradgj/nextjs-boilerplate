@@ -1,0 +1,57 @@
+.drops_section {
+    background-image:
+        url('/platform.png'),
+        url('/tiger-poloski.png'),
+        linear-gradient(#431400 0%, #0d0d0d 100%);
+    background-size: contain, cover, cover;
+    background-repeat: no-repeat;
+    background-position: bottom, center, center;
+}
+
+.drops_title {
+    font-size: 7rem;
+    background: linear-gradient(to bottom, #431900, #A93F00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    background-clip: text;
+    color: transparent;
+}
+
+.drops_text {
+    color: #FFE9D9;
+    font-size: 3rem;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.drops_text .thin {
+    font-size: 2rem;
+    margin-top: 2rem;
+    max-width: 20rem;
+}
+
+.drops_text-left {
+    align-items: start;
+}
+
+.drops_text-right {
+    align-items: end;
+}
+
+.drops_text-right p:nth-child(2) {
+    margin-left: 1.5rem;
+}
+
+.drops_text-left p:nth-child(1),
+.drops_text-left p:nth-child(3) {
+    margin-left: 8rem;
+}
+
+.drops_tiger-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: -3rem;
+}
