@@ -135,7 +135,7 @@
         position: relative;
     }
 
-    .burger-menu_navigation-list_item::after {
+    .burger-menu_navigation-list_item.underline::after {
         position: absolute;
         content: "";
         width: 100%;
