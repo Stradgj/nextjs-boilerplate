@@ -19,7 +19,7 @@
         display: flex;
         gap: 20px;
         align-items: center;
-        z-index: 2;
+        z-index: 2 !important;
     }
 
     .mob-lang-switcher {
