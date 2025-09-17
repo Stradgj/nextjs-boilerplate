@@ -1,0 +1,26 @@
+.scroll-cards_section {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-inline: 4rem;
+  scroll-padding-inline: 4rem;
+  scrollbar-width: none;
+}
+.scroll-cards_section::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-cards {
+  display: flex;
+  gap: 10px;
+}
+
+.scroll-cards > * {
+  flex: 0 0 270px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+@media screen and (min-width: 700px) {
+  .scroll-cards_section {
+    display: none;
+  }
+}

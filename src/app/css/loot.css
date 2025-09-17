@@ -1,0 +1,197 @@
+.loot-section {
+  position: relative;
+  padding-bottom: 14rem;
+}
+.white-gradient {
+  background: linear-gradient(to bottom, #e4d5c0, #c8b69d);
+}
+.loot-images {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.loot-image:nth-child(2) {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loot-title div {
+  font-size: 19rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text !important;
+
+  line-height: 1;
+  color: transparent;
+  text-align: center;
+  letter-spacing: -10px;
+  background: linear-gradient(to bottom, #431900 0%, #a93f00 100%);
+}
+.loot-title .space {
+  color: transparent;
+  background: transparent;
+}
+.loot-text {
+  color: #431900;
+  font-size: 4rem;
+  max-width: 35rem;
+  position: absolute;
+  line-height: 1;
+  top: 0;
+}
+.loot-text-thin {
+  color: #431900;
+  line-height: 1;
+  font-size: 2rem;
+  max-width: 35rem;
+  position: absolute;
+  bottom: 20rem;
+}
+.loot-text:nth-child(1) {
+  left: 4rem;
+}
+.loot-text:nth-child(2) {
+  right: 4rem;
+  text-align: end;
+}
+.loot-text-thin:nth-child(5) {
+  left: 4rem;
+}
+.loot-text-thin:nth-child(6) {
+  right: 4rem;
+  text-align: end;
+}
+.benefit-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.benefit-icon {
+  padding: 2rem;
+  background: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.2));
+  border-radius: 50px;
+  margin-bottom: 3rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.benefit-title {
+  font-size: 4rem;
+  margin-top: 2rem;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  line-height: 1;
+}
+.benefit-title::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #f1d0bd3b, transparent);
+}
+.benefits-section {
+  position: relative;
+  z-index: 2;
+  margin: -40px 0;
+  background: radial-gradient(ellipse at bottom, #441901, #aa3f03);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5rem;
+  justify-content: space-between;
+  border-radius: 40px;
+}
+
+@media screen and (max-width: 1650px) {
+  .loot-title div {
+    font-size: 16rem;
+  }
+  .loot-text {
+    font-size: 3rem;
+  }
+  .loot-image {
+    max-width: 60rem;
+  }
+  .loot-image img {
+    width: 100%;
+  }
+  .loot-images {
+    top: 37%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .loot-images {
+    width: 90%;
+  }
+  .loot-title div {
+    font-size: 10rem;
+    letter-spacing: -5px;
+  }
+  .loot-image {
+    max-width: 40rem;
+  }
+  .loot-title {
+    margin: 10rem 0 15rem;
+  }
+  .loot-text-thin,
+  .loot-text {
+    max-width: 40%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .benefits-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .benefit-block:nth-child(odd) {
+    align-items: start;
+  }
+  .benefit-block:nth-child(even) {
+    align-items: end;
+  }
+  .benefit-block:nth-child(odd) .benefit-title {
+    text-align: start;
+  }
+  .benefit-block:nth-child(even) .benefit-title {
+    text-align: end;
+  }
+  .benefit-title::before {
+    display: none;
+  }
+  .benefit-title {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .loot-title div {
+    font-size: 8rem;
+    letter-spacing: -5px;
+  }
+  .loot-text {
+    font-size: 2rem;
+  }
+  .loot-text-thin {
+    font-size: 1.4rem;
+  }
+  .loot-title {
+    margin: 5rem 0 15rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .benefit-title {
+    font-size: 3rem;
+  }
+}

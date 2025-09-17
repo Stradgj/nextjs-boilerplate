@@ -1,0 +1,235 @@
+.home_section {
+    background-color: #431400;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: start;
+}
+
+.home_section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/hero-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    animation: zoom-pulse 10s infinite ease-in-out;
+}
+
+.home_section * {
+    z-index: 1;
+    position: relative;
+}
+
+@keyframes zoom-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+        filter: brightness(1.1);
+    }
+}
+
+.home-text {
+    align-self: end;
+    margin-bottom: 10rem;
+    clip-path: inset(0 100% 0 0);
+    animation: reveal-text 1s ease-out forwards;
+}
+
+@keyframes reveal-text {
+    0% {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.home_title-container {
+    max-width: 100vw;
+}
+
+.home_title-container img {
+    width: 100%;
+}
+
+.home-text_top {
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: #ffeadb33;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.home_bottom-section {
+    align-self: end;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    z-index: 2;
+    gap: 2rem
+}
+
+.home_bottom-text_container {
+    display: flex;
+    gap: 2rem
+}
+
+.home_bottom-text_container p {
+    color: #FFE9D9;
+    font-size: 2rem;
+    max-width: 45rem;
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    animation: reveal-paragraph 1s ease-out forwards;
+}
+
+@keyframes reveal-paragraph {
+    0% {
+        opacity: 0;
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    }
+
+    100% {
+        opacity: 1;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+.home_bottom-text_container p:last-child {
+    color: #FFE9D9;
+    font-size: 2rem;
+    max-width: 35rem;
+}
+
+.home_bottom-buttons_container {
+    display: grid;
+    grid-template-columns: 25rem 25rem;
+    gap: 5px;
+
+}
+
+.home_tiger-image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    max-width: 50%;
+    opacity: 0.5;
+    animation: revealTiger 1s forwards;
+}
+
+@keyframes revealTiger {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, 100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0%);
+    }
+}
+
+.mobile-home-info {
+    display: none;
+}
+
+@media screen and (max-width:820px) {
+    .home_bottom-text_container {
+        display: none;
+    }
+
+    .home_bottom-buttons_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        display: grid;
+        width: 100%;
+    }
+
+    .home-text_top,
+    .home_title-container {
+        display: none;
+    }
+
+    .mobile-home-info {
+        display: flex;
+        gap: 1.4rem;
+        flex-direction: column;
+    }
+
+    .home_tiger-image {
+        max-width: 100%;
+        max-height: 50%;
+    }
+
+    .mobile-home-info p,
+    .mobile-home-info h1 {
+        color: #FFE9D9;
+        line-height: 1;
+    }
+
+    .mobile-home-text {
+        font-size: 2rem;
+    }
+
+    .mobile-home-title {
+        font-size: 15rem;
+        letter-spacing: -2px;
+        text-align: center;
+    }
+
+    .home-text {
+        align-self: start;
+    }
+
+    .mobile-home-text:last-child {
+        text-align: end;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .mobile-home-title {
+        font-size: 11rem;
+        letter-spacing: -2px;
+    }
+
+    .home_section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("/hero-bg-mob.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+        animation: zoom-pulse 10s infinite ease-in-out;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .mobile-home-title {
+        font-size: 9rem;
+        letter-spacing: -2px;
+    }
+}
+
+@media screen and (max-width:330px) {
+    .mobile-home-title {
+        font-size: 8rem;
+        letter-spacing: -2px;
+    }
+}

@@ -1,0 +1,38 @@
+.custom_button:link,
+.custom_button:visited {
+    display: flex;
+    padding: 0.8rem;
+    background-color: #FFE9D9;
+    color: #000;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    align-items: center;
+}
+
+.custom_button span {
+    margin: 0 auto;
+}
+
+.button-icon_container {
+    width: 5.8rem;
+    height: 5.8rem;
+    display: flex;
+    justify-self: end;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+
+}
+
+.button-icon_container img {
+    max-width: 4rem;
+}
+
+@media screen and (max-width:530px) {
+
+    .custom_button:link,
+    .custom_button:visited {
+        padding: 0.5rem;
+    }
+}

@@ -1,0 +1,307 @@
+/* Все слайды по дефолту полупрозрачные */
+.slider-container .slick-slide {
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.slider-container {
+  position: relative;
+}
+.black-orange {
+  background: linear-gradient(
+    to bottom,
+    #0d0d0d 0%,
+    #0d0d0d 18%,
+    /* ↑ сделай чёрного больше здесь */ #2b1408 38%,
+    #6a2607 58%,
+    #ff4c00 80%,
+    /* твой FF4C00 */ #ffa435 96%,
+    /* твой FFA435 */ #ffc76c 100%
+  ); /* мягкий низ */
+  padding: 10rem 0 0;
+  line-height: 1;
+
+  position: relative;
+}
+.slider-container .images-slider .slick-slide {
+  transform: scale(1) translateY(5%);
+}
+.slider-container .slick-slide img {
+  width: 100%;
+}
+.slider-container .images-slider .slick-slide > div {
+  margin: 4rem;
+  position: relative;
+}
+/* Центральный слайд */
+.slider-container .slick-center {
+  opacity: 1;
+  z-index: 2;
+  border-radius: 40px;
+}
+.slider-container .images-slider .slick-center {
+  transform: scale(1.1);
+}
+
+/* Для второго слайдера – только прозрачность */
+.slider-titles .slick-slide {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.slider-titles .slick-center {
+  opacity: 1;
+}
+.slider-section .decor-top {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0; /* подгони, если надо чуть выше/ниже */
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.35));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-section .decor-bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -2px;
+  width: 20px;
+  height: 5px;
+  background: #ffe9d9;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.35));
+}
+.slider-section {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.slider-title {
+  background: linear-gradient(#431900, #a93f00);
+  background-clip: border-box;
+  -webkit-text-fill-color: transparent;
+  color: #0000;
+  letter-spacing: -3%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 18rem;
+  line-height: 1;
+  margin: 0 4rem;
+  text-align: center;
+}
+
+.slider-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 100%;
+  background: linear-gradient(to right, rgba(13, 13, 13, 1) 0%, rgba(13, 13, 13, 0) 100%);
+  pointer-events: none; /* чтобы не мешал кликам */
+  z-index: 3;
+}
+
+.slider-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10rem;
+  height: 100%;
+  background: linear-gradient(to left, rgba(13, 13, 13, 1) 0%, rgba(13, 13, 13, 0) 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+.slide-card {
+  position: relative;
+  display: inline-block;
+  border-radius: 16px;
+  overflow: visible;
+  margin-bottom: 4rem;
+  max-width: 70rem;
+  width: 100%;
+}
+.slider-container .images-slider .slick-slide > div > div {
+  display: flex !important;
+  justify-content: center;
+}
+.slide-card .card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.slide-card .card-reflection {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 14px);
+  transform: scaleY(-1);
+  opacity: 0.55;
+  border-radius: 16px;
+  filter: brightness(0.9) saturate(0.95);
+
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 30%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 30%);
+}
+
+.slick-center .card-reflection {
+  opacity: 0.55;
+}
+
+.slick-list {
+  overflow: visible;
+}
+
+.titles-decor {
+  position: relative;
+  padding: 20px 0;
+}
+
+.titles-decor::before,
+.titles-decor::after,
+.slider-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  -webkit-mask: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  mask: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
+}
+
+.titles-decor::before {
+  top: 1rem;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    hwb(25 85% 0% / 0.6) 10%,
+    hwb(25 85% 0% / 0.6) 90%,
+    rgba(255, 255, 255, 0)
+  );
+  opacity: 0.9;
+}
+
+.titles-decor::after {
+  bottom: 10px;
+  height: 1px;
+  background: radial-gradient(
+      circle at center,
+      hwb(25 85% 0% / 0.6) 5px,
+      rgba(255, 255, 255, 0) 2px
+    )
+    left center / 15px 2px repeat-x;
+  opacity: 0.9;
+}
+
+.slider-titles .title-pill {
+  position: relative;
+  z-index: 2;
+
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: rgba(255, 236, 220, 0.12);
+  backdrop-filter: blur(2px);
+}
+.slider-container::after {
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    hwb(25 85% 0% / 0.6) 10%,
+    hwb(25 85% 0% / 0.6) 90%,
+    rgba(255, 255, 255, 0)
+  );
+  opacity: 0.9;
+}
+.slider-subtitle {
+  color: #fff;
+  position: absolute;
+  top: 40rem;
+  left: 15%;
+  z-index: 3;
+}
+.slider-subtitle span {
+  font-size: 8rem;
+  display: block;
+  line-height: 1;
+}
+.slider-subtitle span:nth-child(odd) {
+  transform: translateX(100px);
+}
+.slider-subtitle p {
+  font-size: 2rem;
+  transform: translateX(120px);
+  max-width: 24rem;
+  letter-spacing: -2%;
+  margin-top: 3rem;
+  line-height: 1;
+}
+.slider-text-slide {
+  font-size: 4rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  .slider-text-slide {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .slider-text-slide {
+    font-size: 3rem;
+  }
+  .slider-title {
+    font-size: 5rem;
+  }
+  .slider-container .images-slider .slick-slide > div {
+    margin: 1rem;
+  }
+  .slider-subtitle {
+    position: relative;
+    margin: 4rem 0;
+    display: flex;
+    top: initial;
+    left: initial;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider-subtitle span:nth-child(odd) {
+    transform: translateX(0px);
+  }
+  .slider-subtitle span:nth-child(even) {
+    transform: translateX(-50px);
+  }
+  .slider-subtitle span {
+    font-size: 4rem;
+  }
+  .slider-subtitle p {
+    font-size: 2rem;
+    transform: translateX(0px);
+    max-width: 20rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .slider-text-slide {
+    font-size: 2rem;
+  }
+}

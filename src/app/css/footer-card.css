@@ -1,0 +1,51 @@
+.footer-card:link,
+.footer-card:visited {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem;
+  border-radius: 20px;
+  transition: all 0.5s;
+
+  row-gap: 5.3rem;
+  background: radial-gradient(circle at center, #aa3f03 0%, #441901 100%);
+}
+.footer-card_arrow {
+  justify-self: end;
+}
+.footer-card:link:nth-child(2),
+.footer-card:visited:nth-child(2) {
+  row-gap: 9.1rem;
+}
+.footer-card_arrow {
+  justify-self: end;
+}
+
+.footer-card_text {
+  color: #fff;
+  font-size: 4rem;
+}
+.footer-card:hover,
+.footer-card:active {
+  transform: translateY(-20px);
+}
+@media screen and (max-width: 850px) {
+  .footer-card:link,
+  .footer-card:visited {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .footer-card:link:nth-child(2),
+  .footer-card:visited:nth-child(2) {
+    gap: 3rem;
+  }
+  .footer-card_arrow {
+    display: none;
+  }
+  .footer-card_logo {
+    justify-self: center;
+  }
+  .footer-card_text {
+    text-align: center;
+  }
+}

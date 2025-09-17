@@ -1,0 +1,192 @@
+.cards_title {
+  font-size: 23rem;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 40rem;
+  letter-spacing: -3%;
+  text-align: center;
+}
+.cards-container figure {
+  margin: 0 auto;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-bottom: 15rem;
+  left: 0px;
+  transform-origin: center center;
+  border-radius: 5rem;
+}
+
+.cards-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card_image-container img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: 0 8px 24px #0003;
+  border-radius: 5rem;
+}
+
+/* Чтобы следующие кадры перекрывали предыдущие */
+.card_image-container:nth-child(1) {
+  z-index: 1;
+}
+.card_image-container:nth-child(2) {
+  z-index: 2;
+}
+.card_image-container:nth-child(2) img {
+  transform: rotate(10deg);
+}
+.card_image-container:nth-child(3) {
+  z-index: 3;
+}
+.card_image-container:nth-child(3) img {
+  transform: rotate(-10deg);
+}
+.card_image-container:nth-child(4) {
+  z-index: 4;
+}
+.card_image-container:nth-child(4) img {
+  transform: rotate(20deg);
+}
+.card_image-container:nth-child(5) {
+  z-index: 5;
+}
+.card_image-container:nth-child(5) img {
+  transform: rotate(-20deg);
+}
+
+/* Центрирование без left/transform (проще и чище) */
+.cards-container,
+.card_image-container {
+  display: block;
+}
+.card-text_block {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.card-text_block:not(:last-child) {
+  margin-bottom: 40rem;
+}
+.card-text_block.left {
+  justify-content: start;
+}
+.card-text_block article {
+  max-width: 45rem;
+}
+.card-text_icon {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 4rem;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(#ffffff1a, #fff3);
+  border-radius: 100px;
+  justify-content: center;
+}
+.card-text_title {
+  font-size: 8rem;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 3rem;
+  letter-spacing: -3%;
+  text-transform: uppercase;
+}
+.card-text_p {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.card-text_block {
+  text-align: end;
+  transform: translateY(-50%);
+}
+.card-text_block.left p,
+.card-text_block.left h3 {
+  text-align: start;
+}
+
+.card-text_block .card-text_icon {
+  margin: 0 0 3rem auto;
+}
+.card-text_block.left .card-text_icon {
+  margin: 0 0 3rem 0;
+}
+
+@media screen and (max-width: 1600px) {
+  .card_image-container {
+    max-width: 36rem;
+  }
+  .card-text_block:not(:last-child) {
+    margin-bottom: 24rem;
+  }
+  .cards_title {
+    font-size: 16rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card_image-container {
+    max-width: 36rem;
+  }
+  .card-text_block {
+    text-align: start;
+    justify-content: start;
+    align-items: center;
+  }
+  .card-text_block:not(:last-child) {
+    margin-bottom: 20rem;
+  }
+  .cards_title {
+    font-size: 8rem;
+  }
+  .card-text_block p,
+  .card-text_block h3 {
+    text-align: start;
+  }
+  .card-text_block .card-text_icon {
+    margin: 0 0 3rem;
+  }
+  .cards-container {
+    right: 0px;
+
+    left: initial;
+    transform: translateX(0);
+  }
+  .card-text_block:not(:last-child) {
+    margin-bottom: 32rem;
+  }
+  .card-text_title {
+    font-size: 4rem;
+  }
+  .card_image-container img {
+    border-radius: 3rem 0 0 3rem;
+    box-shadow: none;
+  }
+  .cards-container figure {
+    max-width: 30rem;
+    border-radius: 3rem 0 0 3rem;
+  }
+  .card-text_block article {
+    max-width: 30rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .card-text_block article {
+    max-width: 25rem;
+  }
+  .card-text_block:not(:last-child) {
+    margin-bottom: 25rem;
+  }
+  .card_image-container img {
+    margin-right: -10rem;
+  }
+}
