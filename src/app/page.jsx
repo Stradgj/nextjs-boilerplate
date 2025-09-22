@@ -235,19 +235,29 @@ export default function Home() {
           <h2 className="cards_title bold">The Journey Has Just Begun</h2>
           <div className="cards-container">
             <figure className="card_image-container">
-              <img className="card-pc" src="/card_1.png" alt=""></img>
+              <div className="card-container">
+                <img className="card-pc" src="/card_1.png" alt=""></img>
+              </div>
             </figure>
             <figure className="card_image-container">
-              <img className="card-pc" src="/card_2.png" alt=""></img>
+              <div className="card-container">
+                <img className="card-pc" src="/card_2.png" alt=""></img>
+              </div>
             </figure>
             <figure className="card_image-container">
-              <img className="card-pc" src="/card_3.png" alt=""></img>
+              <div className="card-container">
+                <img className="card-pc" src="/card_3.png" alt=""></img>
+              </div>
             </figure>
             <figure className="card_image-container">
-              <img className="card-pc" src="/card_4.png" alt=""></img>
+              <div className="card-container">
+                <img className="card-pc" src="/card_4.png" alt=""></img>
+              </div>
             </figure>
             <figure className="card_image-container">
-              <img className="card-pc" src="/card_5.png" alt=""></img>
+              <div className="card-container">
+                <img className="card-pc" src="/card_5.png" alt=""></img>
+              </div>
             </figure>
           </div>
           <CardText
