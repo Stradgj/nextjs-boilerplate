@@ -178,8 +178,6 @@
   .card-text_block article {
     max-width: 30rem;
   }
-}
-@media screen and (max-width: 400px) {
   .card-text_block article {
     max-width: 25rem;
   }
