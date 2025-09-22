@@ -127,7 +127,10 @@
     grid-area: 1/1;
   }
 }
-.card-container {
-  overflow: hidden;
-  padding: 3rem;
+
+@media screen and (max-width: 1200px) {
+  .card-container {
+    overflow: hidden;
+    padding: 3rem;
+  }
 }
