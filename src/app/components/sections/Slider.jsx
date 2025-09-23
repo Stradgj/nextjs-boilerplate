@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 
-export default function SliderSection() {
+export default function SliderSection({ lang }) {
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
 
@@ -19,11 +19,20 @@ export default function SliderSection() {
   }
 
   const data = [
-    { title: 'SPORT CHAMPIONS', img: '/Champion.png' },
-    { title: 'UNIQUE NFTS', img: '/NFTs.png' },
-    { title: 'PRIVATE OFFLINE EVENTS', img: '/Events.png' },
-    { title: 'Exclusive Merchandise', img: '/Merchandise.png' },
-    { title: 'Access to VIP Workshops', img: '/VIP.png' },
+    { title: `${lang !== 'ua' ? 'SPORT CHAMPIONS' : 'Спортивний чемпіон'}`, img: '/Champion.png' },
+    { title: `${lang !== 'ua' ? 'Unique NFTs' : 'унікальні нфт'}`, img: '/NFTs.png' },
+    {
+      title: `${lang !== 'ua' ? 'Private Offline Events' : 'Закриті офлайн-заходи'}`,
+      img: '/Events.png',
+    },
+    {
+      title: `${lang !== 'ua' ? 'Exclusive Merchandise' : 'Ексклюзивні товари'}`,
+      img: '/Merchandise.png',
+    },
+    {
+      title: `${lang !== 'ua' ? 'Access to VIP Workshops' : 'Доступ до VIP-семінарів'}`,
+      img: '/VIP.png',
+    },
   ];
 
   const sliderRef1 = useRef(null);
@@ -44,6 +53,7 @@ export default function SliderSection() {
     speed: 500,
     arrows: false,
     asNavFor: nav2,
+    focusOnSelect: true,
   };
 
   const isMobile = useIsMobile(700);

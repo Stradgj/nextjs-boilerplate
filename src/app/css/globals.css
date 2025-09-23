@@ -64,3 +64,8 @@ a {
     font-size: 7px;
   }
 }
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 6px;
+  }
+}

@@ -1,6 +1,6 @@
-import HomeBottom from './components/blocks/HomeBottom';
-import HomeText from './components/blocks/HomeText';
-import Header from './components/sections/Header';
+import HomeBottom from '@/app/components/blocks/HomeBottom';
+import HomeText from '@/app/components/blocks/HomeText';
+import Header from '@/app/components/sections/Header';
 import '@/app/css/home.css';
 import '@/app/css/about.css';
 import '@/app/css/works.css';
@@ -13,52 +13,56 @@ import '@/app/css/slider.css';
 import '@/app/css/cards.css';
 import '@/app/css/waiting.css';
 import '@/app/css/footer.css';
-import Burger from './components/sections/MobileHeader';
-import Button from './components/elements/Button';
-import Card from './components/blocks/Card';
-import SlideCard from './components/blocks/SlideCard';
-import GradientCard from './components/blocks/GradientCard';
-import Benefit from './components/blocks/Benefit';
-import CardText from './components/blocks/CardText';
-import SliderSection from './components/sections/Slider';
-import FooterCard from './components/blocks/FooterCard';
+import Burger from '@/app/components/sections/MobileHeader';
+import Button from '@/app/components/elements/Button';
+import Card from '@/app/components/blocks/Card';
+import SlideCard from '@/app/components/blocks/SlideCard';
+import GradientCard from '@/app/components/blocks/GradientCard';
+import Benefit from '@/app/components/blocks/Benefit';
+import CardText from '@/app/components/blocks/CardText';
+import SliderSection from '@/app/components/sections/Slider';
+import FooterCard from '@/app/components/blocks/FooterCard';
 
 export default function Home() {
   return (
     <div>
       <section className="home_section container">
-        <Header lang="en" />
-        <Burger lang="en" />
-        <HomeText lang="en" />
-        <HomeBottom lang="en" />
+        <Header lang="ua" />
+        <Burger lang="ua" />
+        <HomeText lang="ua" />
+        <HomeBottom lang="ua" />
         <img className="home_tiger-image" alt="tiger" src="/tiger.png"></img>
       </section>
       <section className="container gradient-section pc-cells" id="early-birds">
         <div className="cards-grid cells">
           <div className="mob-cells phone-el">
             <h2 className="about_title bold">
-              <span>Gamified</span> <span>Pre-Seasons</span> <span>Push</span>
+              <span>Гейміфікована</span> <span>передсезонна</span> <span>підготовка</span>
             </h2>
             <div className="phone_container">
               <img className="phone-mob" src="/phone_mob.png"></img>
               <img className="phone" src="/phone.png"></img>
             </div>
             <p className="phone-text thin">
-              Sports, Gaming, and Blockchain — Playing in the Same Bambosso League
+              Спорт, ігри та блокчейн - грають в одній лізі Бамбоссо
             </p>
             <Button
               color="#1C76A4"
-              text="Start"
+              text="Почати гру"
               link="#"
               icon="/wings.svg"
               iconPosition="right"
             ></Button>
           </div>
 
-          <Card position="01" title="Unique NFT Cards" img="/card_1_img.png" />
-          <Card position="02" title="Access to exclusive offline events" img="/card_2_img.png" />
-          <Card position="03" title="VIP workshop with pro footballers" img="/card_3_img.png" />
-          <Card position="04" title="IRL merch giveaways" img="/card_4_img.png" />
+          <Card position="01" title="Унікальні NFT-картки" img="/card_1_img.png" />
+          <Card position="02" title="Доступ до ексклюзивних офлайн-подій" img="/card_2_img.png" />
+          <Card
+            position="03"
+            title="VIP майстер-клас з професійними футболістами"
+            img="/card_3_img.png"
+          />
+          <Card position="04" title="Розіграші сувенірів IRL" img="/card_4_img.png" />
           <div className="about-bg-text thin">
             <span>Pssst....</span>
             <span>and</span>
@@ -72,51 +76,51 @@ export default function Home() {
         </div>
       </section>
       <h1 className="works_title">
-        <img src="/works_title.png" alt="how it works"></img>
+        <img src="/works_title_ua.png" alt="how it works"></img>
       </h1>
       <section className="works-section container" id="works">
         <SlideCard
           img="/slide_card-1.png"
-          title="Shape your hero, make your's legendary"
+          title="Створіть свого героя, зробіть його легендарним"
           position={1}
         />
         <SlideCard
           img="/slide_card-2.png"
-          title="Gamified battles, fast-paced, strategic wins"
+          title="Гейміфіковані битви, швидкий темп, стратегічні перемоги"
           position={2}
         />
         <SlideCard
           img="/slide_card-3.png"
-          title="Boost your rank: earn cases, power-ups, and climb the leaderboard"
+          title="Підвищуйте свій рейтинг: заробляйте кейси, бонуси та очолюйте таблицю лідерів"
           position={3}
         />
         <SlideCard
           img="/slide_card-4.png"
-          title="Support your club — earn points for victories"
+          title="Підтримайте свій клуб - заробляйте бали за перемоги"
           position={4}
         />
         <SlideCard
           img="/slide_card-5.png"
-          title="Meet your sports heroes and get scouted"
+          title='зустріньтесь зі своїми спортивними героями та опануйте роль "скаута"'
           position={5}
         />
       </section>
       <section className="drops_section container" id="drops">
-        <h1 className="drops_title bold">Loot Drops While You Play!</h1>
+        <h1 className="drops_title bold">Під час гри падає лут!</h1>
         <div className="drops_text-right drops_text drops_text-mob">
           <div>
-            <p className="bold">NFTs</p>
-            <p className="bold">and</p>
-            <p className="bold">loot cases</p>
+            <p className="bold">NFT</p>
+            <p className="bold">та</p>
+            <p className="bold">подарунки</p>
           </div>
         </div>
         <div className="drops_text-left drops_text drops_text-mob">
           <div>
-            <p className="bold">Open cases,</p>
-            <p className="bold">collect NFTs</p>
-            <p className="bold">win real prizes</p>
+            <p className="bold">Відкривайте кейси,</p>
+            <p className="bold">збирайте NFT,</p>
+            <p className="bold">вигравайте реальні призи</p>
 
-            <p className="thin">Every match is a new chance to score epic rewards!</p>
+            <p className="thin">Кожен матч - це новий шанс заробити епічні нагороди!</p>
           </div>
         </div>
         <div className="drops_tiger-container">
@@ -125,44 +129,44 @@ export default function Home() {
         </div>
         <div className="drops_text-right drops_text drops_text-pc drops_text-pc-1">
           <div>
-            <p className="bold">NFTs</p>
-            <p className="bold">and</p>
+            <p className="bold">NFT</p>
+            <p className="bold">та</p>
           </div>
         </div>
         <div className="drops_text-right drops_text drops_text-pc drops_text-pc-2">
           <div>
-            <p className="bold">Loot Cases</p>
+            <p className="bold">подарунки</p>
           </div>
         </div>
         <div className="drops_text-left drops_text drops_text-pc drops_text-pc-3">
           <div>
-            <p className="bold">Open cases,</p>
-            <p className="bold">collect NFTs</p>
-            <p className="bold">win real prizes</p>
+            <p className="bold">Відкривайте кейси,</p>
+            <p className="bold">збирайте NFT,</p>
+            <p className="bold">вигравайте реальні призи</p>
 
-            <p className="thin">Every match is a new chance to score epic rewards!</p>
+            <p className="thin">Кожен матч - це новий шанс заробити епічні нагороди!</p>
           </div>
         </div>
         <div className="drops-cards">
           <GradientCard
             colX="#DCCDB3"
             colY="#441901"
-            title="Standard Cases"
-            text="Unlock cool game skins and upgrades"
+            title="стандартні кейси"
+            text="Розблокуйте круті ігрові скіни та оновлення"
             img="/white.png"
           />
           <GradientCard
             colX="#B05E01"
             colY="#441901"
-            title="Premium Cases"
-            text="Boost your avatar with rare items and power-ups"
+            title="преміальні кейси"
+            text="Покращуйте свій аватар рідкісними предметами та бонусами"
             img="/orange_bambosso.png"
           />
           <GradientCard
             colX="#0071A9"
             colY="#110C10"
-            title="Real-World Cases"
-            text="Get NFTs, real merch, and chances to meet football stars!"
+            title="фізичні кейси"
+            text="Отримайте NFT, справжній мерч та шанс зустрітися з футбольними зірками!"
             img="/blue.png"
           />
         </div>
@@ -173,29 +177,29 @@ export default function Home() {
             <GradientCard
               colX="#DCCDB3"
               colY="#441901"
-              title="Standard Cases"
-              text="Unlock cool game skins and upgrades"
+              title="стандартні кейси"
+              text="Розблокуйте круті ігрові скіни та оновлення"
               img="/white.png"
             />
             <GradientCard
               colX="#B05E01"
               colY="#441901"
-              title="Premium Cases"
-              text="Boost your avatar with rare items and power-ups"
+              title="преміальні кейси"
+              text="Покращуйте свій аватар рідкісними предметами та бонусами"
               img="/orange_bambosso.png"
             />
             <GradientCard
               colX="#0071A9"
               colY="#110C10"
-              title="Real-World Cases"
-              text="Get NFTs, real merch, and chances to meet football stars!"
+              title="фізичні кейси"
+              text="Отримайте NFT, справжній мерч та шанс зустрітися з футбольними зірками!"
               img="/blue.png"
             />
           </div>
         </div>
         <div className="loot-section container">
-          <p className="loot-text bold">Choose your favourite club for the season</p>
-          <p className="loot-text bold">Every action you take earns points for your club</p>
+          <p className="loot-text bold">Оберіть свій улюблений клуб на сезон</p>
+          <p className="loot-text bold">Кожна ваша дія приносить бали для вашого клубу</p>
           <div className="loot-images">
             <div className="loot-image">
               <img src="/loot-1.png"></img>
@@ -208,36 +212,36 @@ export default function Home() {
             </div>
           </div>
           <h2 className="loot-title bold">
-            <div>Loot Drops</div>
-            <div className="space">Loot Drops</div>
-            <div>While You</div>
-            <div>Play</div>
+            <div>грайте</div>
+            <div className="space">грайте</div>
+            <div>та отримуйте</div>
+            <div>призи</div>
           </h2>
-          <p className="loot-text-thin thin">The winning club gets a massive donation pool</p>
-          <p className="loot-text-thin thin">Fans earn exclusive rewards from the club</p>
+          <p className="loot-text-thin thin">Клуб-переможець отримує фонд пожертвувань</p>
+          <p className="loot-text-thin thin">
+            Вболівальники отримують ексклюзивні винагороди від клубу
+          </p>
         </div>
       </section>
       <section className="benefits-section container">
-        <Benefit img="/run.svg" text="Access to club training sessions" />
-        <Benefit img="/stadium.svg" text=" Stadium tours and behind-the-scenes experiences" />
-        <Benefit img="/ball.svg" text="Meet & greet with footballers" />
-        <Benefit img="/calendar.svg" text="Invitations to private events" />
+        <Benefit img="/run.svg" text="Доступ до клубних тренувань" />
+        <Benefit img="/stadium.svg" text="Екскурсії по стадіону та за лаштунками" />
+        <Benefit img="/ball.svg" text="Зустріч з футболістами" />
+        <Benefit img="/calendar.svg" text="Запрошення на приватні заходи" />
       </section>
       <section className="black-orange">
-        <h2 className="slider-title bold">
-          Register early and join the exclusive draw for a chance to win:
-        </h2>
+        <h2 className="slider-title bold">Реєструйтесь завчасно — беріть участь у розіграші</h2>
         <div className="slider-subtitle">
-          <span className="bold">Early</span>
-          <span className="bold">Access</span>
-          <span className="bold">Rewards</span>
+          <span className="bold">нагороди</span>
+          <span className="bold">за ранній</span>
+          <span className="bold">доступ</span>
           <p className="thin">
-            The earlier you join, the closer you are to the game-changing prizes!
+            чим раніше доєднаєтесь, тим ближче станете до призів, котрі змінюють правила гри!
           </p>
         </div>
-        <SliderSection />
+        <SliderSection lang="ua" />
         <div className="cards-section container" id="roadmap">
-          <h2 className="cards_title bold">The Journey Has Just Begun</h2>
+          <h2 className="cards_title bold">Подорож тільки починається</h2>
           <div className="cards-container">
             <figure className="card_image-container">
               <div className="card-container">
@@ -268,51 +272,51 @@ export default function Home() {
           <CardText
             num="1"
             isLeft={true}
-            title="Launch Season"
-            text="Testing, early marketing campaigns, and onboarding our first players"
+            title="Сезон запуску"
+            text="Тестування, ранні маркетингові кампанії та залучення перших гравців"
           />
           <CardText
             num="2"
             isLeft={false}
-            title="PvP Battles and AI Challenges"
-            text="Real-time player vs player action, AI opponents, and ranking systems"
+            title="PvP-битви та завдання зі шІ"
+            text="Гравець проти гравця в реальному часі, ШІ-супротивники та рейтингові системи"
           />
           <CardText
             num="3"
             isLeft={true}
-            title="Marketplace and Loot Cases"
-            text="Fan Shop opens! Unlock NFTs, exclusive gear, and surprise loot drops"
+            title="Справи про маркетплейс та лут кейси"
+            text="Фан-крамницю відкрито! Розблокуйте NFT, ексклюзивні спорядження та несподіваний лут"
           />
           <CardText
             num="4"
             isLeft={false}
-            title="Expanding Into New Sports"
-            text="Beyond football — get ready for new sports arenas and competitions!"
+            title="Експансія в нові види спорту"
+            text="За межами футболу - готуйтеся до нових спортивних  арен та змагань!"
           />
           <CardText
             num="5"
             isLeft={true}
-            title="The Secret Season"
-            text="A mysterious, game-changing event that will shake the world of sports gaming forever"
+            title="Таємний сезон"
+            text="Загадкова, переломна подія, яка назавжди змінить світ спортивних ігор"
           />
         </div>
         <div className="waiting_section">
-          <h2 className="waiting_title bold">Your Club Is Waiting for You</h2>
+          <h2 className="waiting_title bold">Ваш клуб чекає на вас</h2>
           <div className="waiting_content">
             <p className="waiting_text thin">
-              Join Bambosso — the place where your game changes everything!
+              Приєднуйтесь до Bambosso - місця, де ваша гра змінює все!
             </p>
             <div className="waiting-buttons">
               <Button
                 color="#67341E"
-                text="Learn more"
+                text="більше інфо"
                 link="#"
                 icon="/paw.svg"
                 iconPosition="left"
               ></Button>
               <Button
                 color="#1C76A4"
-                text="Start"
+                text="почати гру"
                 link="#"
                 icon="/scar.svg"
                 iconPosition="right"
@@ -334,44 +338,44 @@ export default function Home() {
         <ul className="footer-white-text">
           <li>
             <a href="#early-birds" className="thin underline">
-              Early Birds
+              ранній доступ
             </a>
           </li>
           <li>
             <a href="#works" className="thin underline">
-              Gameplay
+              геймплей
             </a>
           </li>
           <li>
             <a href="#drops" className="thin underline">
-              NFTs and Loot Cases
+              NFT та подарунки
             </a>
           </li>
           <li>
             <a href="#loot" className="thin underline">
-              Club System
+              клубна система
             </a>
           </li>
           <li>
             <a href="#roadmap" className="thin underline">
-              Roadmap
+              план дій
             </a>
           </li>
         </ul>
         <img src="/big_logo.svg"></img>
         <div className="footer-white-orange">
-          <span className="bold mob-hide">Web3 Powered</span>
+          <span className="bold mob-hide">на базі web3</span>
           <span className="bold">© 2025 Bambosso</span>
           <span className="bold pc-hide">All rights reserved</span>
           <span className="bold mob-hide">
-            powered by <img src="/header-logo.svg"></img>
+            за підтримки <img src="/header-logo.svg"></img>
           </span>
         </div>
       </footer>
       <div className="footer-mob-text container">
-        <span className="bold">Web3 Powered</span>
+        <span className="bold">на базі web3</span>
         <span className="bold">
-          powered by <img src="/header-logo_mob.svg"></img>
+          за підтримки <img src="/header-logo_mob.svg"></img>
         </span>
       </div>
     </div>

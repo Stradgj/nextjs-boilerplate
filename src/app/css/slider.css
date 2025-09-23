@@ -121,6 +121,7 @@
   position: relative;
   display: inline-block;
   border-radius: 16px;
+  cursor: pointer;
   overflow: visible;
   margin-bottom: 4rem;
   max-width: 70rem;
@@ -255,6 +256,7 @@
 }
 .slider-text-slide {
   font-size: 4rem;
+  cursor: pointer;
   color: #fff;
   text-transform: uppercase;
   text-align: center;

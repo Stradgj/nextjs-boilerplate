@@ -14,7 +14,7 @@ a:visited {
 }
 .footer-white-text li {
   position: relative;
-  width: 100%;
+
   display: flex;
   justify-content: start;
 }
@@ -55,6 +55,7 @@ a:visited {
   }
   .footer-white-text li {
     margin-bottom: 2rem;
+    width: 100%;
   }
   .footer-white-text li:nth-child(even) {
     justify-content: end;

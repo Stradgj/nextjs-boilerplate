@@ -1,11 +1,11 @@
-import "./css/globals.css";
-
+import './css/globals.css';
+import LenisProvider from './providers/LenisProvider';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {children}
+        <LenisProvider>{children}</LenisProvider>
       </body>
     </html>
   );
